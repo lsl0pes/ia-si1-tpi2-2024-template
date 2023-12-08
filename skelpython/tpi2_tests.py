@@ -36,9 +36,13 @@ z.query_local(e1='Socrates')
 z.show_query_result()
 print()
 
+print('likes:',z.query_local(rel='likes'),'\n')
 
-print('Socrates:',z.query('Socrates','likes'),'\n')
+print('Socrates-likes:',z.query('Socrates','likes'),'\n')
 
+print('Socrates:',z.query('Socrates'),'\n')
+
+print('Socrates-subtype:',z.query('Socrates','subtype'),'\n')
 
 z.update_assoc_stats('teacher','Descartes')
 print(z.assoc_stats,'\n')
