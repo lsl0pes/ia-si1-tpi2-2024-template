@@ -68,6 +68,9 @@ print(z.assoc_stats,'\n')
 
 z.insert(Declaration('Darwin',AssocOne('Mary','hasMother','Elvira')))
 z.insert(Declaration('Darwin',AssocOne('Elvira','hasMother','Eva')))
+
+print('hasMother:',z.query_local(rel='hasMother'))
+
 z.update_assoc_stats('hasMother','Darwin')
 print(z.assoc_stats['hasMother','Darwin'],'\n')
 z.update_assoc_stats('hasMother')
