@@ -153,8 +153,14 @@ print(constraints)
 
 cs = MyCS(domains,constraints)
 
+import time
+t0 = time.process_time()
 solutions = cs.search_all()
+print('only ',time.process_time()-t0,'seconds :-)')
+
+print(solutions)
 for s in solutions:
     print({v:s[v] for v in variables})
 print(len(solutions))
+
 
